@@ -14,38 +14,42 @@ namespace VehiclesForSale.Data.Models.Vehicle
         [Key]
         public Guid Id { get; set; }
 
-        public string Make { get; set; }
+        public DateTime CreatedPublicationOn { get; set; }
 
-        public string Model { get; set; }
+        public DateTime YearMade { get; set; }
 
-        public int Year { get; set; }
-
-        public int Mileage { get; set; }
+        public long Mileage { get; set; }
 
         public int HorsePower { get; set; }
 
-        public int EngineDisplacement { get; set; }
+        public decimal Price { get; set; }
 
-        public int Price { get; set; }
+        [MaxLength(200)]
+        public string? Description { get; set; }
+        public string? Location { get; set; }
 
-        public string Color { get; set; }
-
-        public string Description { get; set; }
-
-        public string ImageUrl { get; set; }
+        public ICollection<string> Images { get; set; } = new HashSet<string>();
 
         public Fuel Fuel { get; set; }
+        public Color Color { get; set; }
 
         public Transmission Transmission { get; set; }
+
+        [ForeignKey(nameof(Make))]
+        public Guid MakeId { get; set; }
+
+        public Make Make { get; set; } = null!;
+
+        public string Model { get; set; } = null!;
 
         [ForeignKey(nameof(Extra))]
         public Guid ExtraId { get; set; }
 
-        public Extra Extra { get; set; }
+        public Extra Extra { get; set; } = null!;
 
         [ForeignKey(nameof(User))]
-        public Guid UserId { get; set; }
+        public string UserId { get; set; } = null!;
 
-        public ApplicationUser User { get; set; }
+        public ApplicationUser User { get; set; } = null!;
     }
 }

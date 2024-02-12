@@ -6,8 +6,10 @@ namespace VehiclesForSale.Data.Models
     {
         public ApplicationUser()
         {
-        
+            RegistrationDate = DateTime.UtcNow;
         }
+
+        public DateTime RegistrationDate { get; internal set; }
     }
 }
 
