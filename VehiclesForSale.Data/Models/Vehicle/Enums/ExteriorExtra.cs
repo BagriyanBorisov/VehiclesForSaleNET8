@@ -1,0 +1,36 @@
+﻿namespace VehiclesForSale.Data.Models.Vehicle.Enums
+{
+    public enum ExteriorExtra
+    {
+        PowerFoldingMirrors = 1,
+        Sunroof = 2,
+        PanoramicRoof = 3,
+        TintedWindows = 4,
+        RoofRack = 5,
+        RunningBoards = 6,
+        TowPackage = 7,
+        BedLiner = 8,
+        BedCover = 9,
+        TonneauCover = 10,
+        OffRoadPackage = 11,
+        Spoiler = 12,
+        GroundEffects = 13,
+        CustomWheels = 14,
+        CustomPaint = 15,
+        CustomGraphics = 16,
+        CustomExhaust = 17,
+        CustomSuspension = 18,
+        CustomBodyKit = 19,
+        CustomGrille = 20,
+        CustomHeadlights = 21,
+        CustomTaillights = 22,
+        CustomMirrors = 23,
+        CustomBumpers = 24,
+        CustomHood = 25,
+        CustomFenders = 26,
+        CustomDoors = 27,
+        CustomRoof = 28,
+        CustomTrunk = 29,
+        CustomRearEnd = 30,
+    }
+}
