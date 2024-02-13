@@ -17,6 +17,7 @@ namespace VehiclesForSale.Data
         public DbSet<Make> Makes { get; set; } = null!;
         public DbSet<Model> Models { get; set; } = null!;
         public DbSet<Extra> Extras { get; set; } = null!;
+        public DbSet<ImageModel> Images { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

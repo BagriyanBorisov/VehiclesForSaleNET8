@@ -8,7 +8,8 @@ namespace VehiclesForSale.Data.Models.Vehicle
     {
         public Vehicle()
         {
-            
+            Id = Guid.NewGuid();
+            CreatedPublicationOn = DateTime.UtcNow;
         }
 
         [Key]
@@ -28,12 +29,14 @@ namespace VehiclesForSale.Data.Models.Vehicle
         public string? Description { get; set; }
         public string? Location { get; set; }
 
-        public ICollection<string> Images { get; set; } = new HashSet<string>();
+        public ICollection<ImageModel> Images { get; set; } = new HashSet<ImageModel>();
 
         public Fuel Fuel { get; set; }
         public Color Color { get; set; }
 
         public Transmission Transmission { get; set; }
+
+        public PublicationStatus PublicationStatus { get; set; }
 
         [ForeignKey(nameof(Make))]
         public Guid MakeId { get; set; }

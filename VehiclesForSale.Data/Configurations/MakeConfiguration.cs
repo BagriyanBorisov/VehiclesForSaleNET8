@@ -15,11 +15,11 @@ namespace VehiclesForSale.Data.Configurations
         {
             List<Make> makes = new List<Make>
             {
-                new Make { Name = "Any" },
-                new Make { Name = "Mercedes-Benz"},
-                new Make { Name = "BMW"},
-                new Make { Name = "Audi"},
-                new Make { Name = "Volkswagen"}
+                new Make { Name = "Any", Id = Guid.Parse("D22DD65D-DB45-4590-8011-7F1C58CC9045")},
+                new Make { Name = "Mercedes-Benz", Id = Guid.Parse("D33DD65D-DB45-4590-8011-7F1C58CC9045")},
+                new Make { Name = "BMW", Id = Guid.Parse("D44DD65D-DB45-4590-8011-7F1C58CC9045")},
+                new Make { Name = "Audi", Id = Guid.Parse("D55DD65D-DB45-4590-8011-7F1C58CC9045")},
+                new Make { Name = "Volkswagen", Id = Guid.Parse("D66DD65D-DB45-4590-8011-7F1C58CC9045")}
             };
 
             return makes;
